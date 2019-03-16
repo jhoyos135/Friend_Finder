@@ -1,22 +1,19 @@
 const friends = require('../data/friends');
-const express = require('express');
-const bodyParser = require('body-parser');
-// const router = express.Router();
 
 module.exports = (app) => {
 
     // get all json list
-    app.get('/api/friends', (req, res) => {
+    app.get('/api/friends/', (req, res) => {
         res.json(friends)
     });
 
     // saves the new user the array, and return a match
     app.post('/api/friends', (req, res) => {
         let newFriend = req.body;
-        console.log(newFriend.scores);
+        console.log(newFriend);
 
         // function to make user result to array of numbers
-        let newScore = (arr) => {
+        let newScoreResult = (arr) => {
             let newScore = [];
             for(let i in arr) {
                 newScore.push(parseInt(arr[i]));
@@ -50,12 +47,12 @@ module.exports = (app) => {
             return minInx;
         };
         
-        let newFriendScore = newScore(newFriend.scores);
+        let newFriendScore = newScoreResult(newFriend.scores);
         let currentFriendScores = [];
         let differences = [];
 
         for(let i in friends) {
-            currentFriendScores.push(newScore(friends[i].scores));
+            currentFriendScores.push(newScoreResult(friends[i].scores));
         };
 
         for(let i in currentFriendScores) {
@@ -67,7 +64,7 @@ module.exports = (app) => {
 
         friends.push(newFriend);
         res.json(match);
-        // console.log(match)
+        console.log(match)
 
     });
 }
