@@ -29,12 +29,31 @@ let scores = [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10];
     });
     let json = await res.json();
     console.log(json)
+    let html = `
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Your New Best Friend</h1>
+            </div>
+            <div class="modal-body">
+              <h2 id="bestFriend""> ${json.name} </h2>
+              <img id="bestFriendPhoto" src="${json.photo}" style="width:100%;>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div> 
+    `;
+    document.querySelector('#bestFriendModal').innerHTML = html;
 };
 
 submit.addEventListener('submit', (e) => {
     e.preventDefault();
     fetchData();
     console.log('data fetched')
+    $("#bestFriendModal").modal("toggle");
 });
 
 });

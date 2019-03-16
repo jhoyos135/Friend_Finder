@@ -1,7 +1,7 @@
 const friendArray = [
     {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Steve",
+    "photo":"https://source.unsplash.com/category/girl/1920x1080",
     "scores":[
         5,
         1,
@@ -17,7 +17,7 @@ const friendArray = [
   },
   {
     "name":"Sarah",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo":"https://source.unsplash.com/category/girl/1920x1080",
     "scores":[
         1,
         1,
