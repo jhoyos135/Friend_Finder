@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FriendFinder</title>
-  <!-- CSS & JS -->
+  <title>Friend Finder</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
+<nav class="navbar navbar-inverse">
+  <a class="navbar-brand" href="/">Home</a>
+</nav>
+
 <body>
-  <div class="container">
-    <h2>Survey Questions</h2>
+  <div class="container-fluid">
+    <h2 class="text-center">Survey Questions</h2>
     <hr>
-    <h3>
+    <h3 class="text-center">
       <strong>About You</strong>
     </h3>
     <h4>Name (Required)</h4>
-
 
     <form id="submit">
 
@@ -26,7 +27,7 @@
       <input type="text" id="photo" class="form-control" required="">
       <hr>
   
-      <h4><strong>Q1: On a sunny Sunday you prefer to stay at home and enjoy time cooking good food and eating it in the sun.</strong></h4>
+      <h4><strong>1: On a sunny Sunday you prefer to stay at home and enjoy time cooking good food and eating it in the sun.</strong></h4>
       <select class="chosen-select" id="q1" >
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -38,7 +39,7 @@
       
       <br>
       <br>
-      <h4><strong>Q2: You secretly like rainy days because you have an excuse to stay in bed and read a book.</strong></h4>
+      <h4><strong>2: You secretly like rainy days because you have an excuse to stay in bed and read a book.</strong></h4>
       <select class="chosen-select" id="q2" >
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -50,7 +51,7 @@
       
       <br>
       <br>
-      <h4><strong>Q3: You prefer long hikes with a picnic as a date rather than a restaurant-movie night.</strong></h4>
+      <h4><strong>3: You prefer long hikes with a picnic as a date rather than a restaurant-movie night.</strong></h4>
       <select class="chosen-select" id="q3">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -62,7 +63,7 @@
       
       <br>
       <br>
-      <h4><strong>Q4: You care immensely about the environment and hope those around you would too.</strong></h4>
+      <h4><strong>4: You care immensely about the environment and hope those around you would too.</strong></h4>
       <select class="chosen-select" id="q4">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -74,7 +75,7 @@
       
       <br>
       <br>
-      <h4><strong>Q5: You love to help and care for others but sometimes feel you are not receiving as much love.</strong></h4>
+      <h4><strong>5: You love to help and care for others but sometimes feel you are not receiving as much love.</strong></h4>
       <select class="chosen-select" id="q5">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -86,7 +87,7 @@
       
       <br>
       <br>
-      <h4><strong>Q6: You put family first.</strong></h4>
+      <h4><strong>6: You put family first.</strong></h4>
       <select class="chosen-select" id="q6">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -98,7 +99,7 @@
       
       <br>
       <br>
-      <h4><strong>Q7: You like having four seasons.</strong></h4>
+      <h4><strong>7: You like having four seasons.</strong></h4>
       <select class="chosen-select" id="q7">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -110,7 +111,7 @@
       
       <br>
       <br>
-      <h4><strong>Q8: You love to travel light.</strong></h4>
+      <h4><strong>8: You love to travel light.</strong></h4>
       <select class="chosen-select" id="q8">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -122,7 +123,7 @@
   
       <br>
       <br>
-      <h4><strong>Q9: You know the difference between compassion and empathy.</strong></h4>
+      <h4><strong>9: You know the difference between compassion and empathy.</strong></h4>
       <select class="chosen-select" id="q9">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -134,7 +135,7 @@
       
       <br>
       <br>
-      <h4><strong>Q10: You like long hugs.</strong></h4>
+      <h4><strong>10: You like long hugs.</strong></h4>
       <select class="chosen-select" id="q10">
         <option disabled selected value> -- select an option -- </option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -148,8 +149,8 @@
       <br>
       <br>
       <!-- Submit Button -->
-      <button type="submit" class="btn btn-primary btn-lg btn-block">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
+      <button type="submit" class="btn btn-info btn-lg btn-block">
+      <i class="fa fa-check-circle" aria-hidden="true"></i>
        Submit
      </button>
 
@@ -157,8 +158,8 @@
     <hr>
     <div id="bestFriendModal" class="modal fade" role="dialog" tabindex="-1"></div>
     <footer class="footer">
-      <div class="container">
-        <p><a href="/api/friends">API Friends List</a></p>
+      <div class="container text-center">
+        <p><a href="/api/friends">API</a></p>
       </div>
     </footer>
 

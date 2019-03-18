@@ -67,5 +67,5 @@ module.exports = (app) => {
         console.log(match)
 
     });
-}
+};
 
